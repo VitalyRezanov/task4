@@ -6,10 +6,6 @@ import java.util.NoSuchElementException;
 
 public class MyLinkedList<E> implements ILinkedList<E> {
 
-//    private static int INITIAL_CAPACITY = 16;
-//    private static float RESIZE_FACTOR = 0.75f;
-//
-//    private Node<E>[] nodesRefer;
     private int size = 0;
     private Node<E> first;
     private Node<E> last;
@@ -103,18 +99,6 @@ public class MyLinkedList<E> implements ILinkedList<E> {
         return unlink(index);
 
     }
-
-//    private void checkSize() {
-//        if (size > nodesRefer.length * RESIZE_FACTOR)
-//            resize();
-//    }
-
-//    private void resize() {
-//        Node<E>[] newNodesRefer = (Node<E>[]) java.lang.reflect.Array.newInstance(
-//                nodesRefer.getClass().getComponentType(), nodesRefer.length * 2);
-//        for (int i = 0; i < nodesRefer.length; ++i)
-//            newNodesRefer[i] = newNodesRefer[i];
-//    }
 
     private E unlink(int index) {
         if (index == 0)
@@ -244,11 +228,6 @@ public class MyLinkedList<E> implements ILinkedList<E> {
                 nextIndex--;
             lastReturned = null;
         }
-
-//        @Override
-//        public void forEachRemaining(Consumer<? super E> action) {
-//            Iterator.super.forEachRemaining(action);
-//        }
     }
 
     private  String printList(){
